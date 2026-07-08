@@ -5,6 +5,7 @@ import os
 load_dotenv()
 
 api_key = os.getenv("OPENROUTER_API_KEY")
+
 client = OpenAI(
     api_key=api_key,
     base_url="https://openrouter.ai/api/v1"
@@ -47,6 +48,46 @@ Rules:
    Excitement
    Disgust
    None
+
+Examples:
+
+Example 1
+
+Input:
+I got promoted today! I'm so happy!
+
+Output:
+{
+    "sentiment": "Positive",
+    "emotion": "Joy",
+    "confidence": 0.98
+}
+
+Example 2
+
+Input:
+I failed my final exam and I feel terrible.
+
+Output:
+{
+    "sentiment": "Negative",
+    "emotion": "Sadness",
+    "confidence": 0.97
+}
+
+Example 3
+
+Input:
+The meeting was okay. Nothing special happened.
+
+Output:
+{
+    "sentiment": "Neutral",
+    "emotion": "None",
+    "confidence": 0.92
+}
+
+Now analyze the user's message and return only the JSON response.
 """
         },
         {
@@ -55,5 +96,6 @@ Rules:
         }
     ]
 )
+
 print("\nSentiment Analysis:\n")
 print(response.choices[0].message.content)
