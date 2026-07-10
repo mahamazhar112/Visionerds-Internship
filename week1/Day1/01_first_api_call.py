@@ -1,8 +1,8 @@
 from openai import OpenAI
 from dotenv import load_dotenv
-import os
+import os #need it tp access environment varibales
 
-load_dotenv()
+load_dotenv() 
 
 api_key = os.getenv("OPENROUTER_API_KEY")
 
