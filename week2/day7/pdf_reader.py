@@ -1,6 +1,4 @@
 from pypdf import PdfReader
-
-
 def read_pdf(file_path):
     """
     Reads a PDF file and returns all the extracted text.
