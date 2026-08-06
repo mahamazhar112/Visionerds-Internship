@@ -1,0 +1,7 @@
+openai
+python-dotenv
+chromadb
+sentence-transformers
+pypdf
+langchain-text-splitters
+mcp[cli]<2.0.0
